@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selector</title>
+    <style>
+        div p { /* no 1 */
+            color: red;
+        }
+
+        div > p { /* no 2 */
+            background-color: yellow;
+        }
+
+        div + p { /* no 3 */
+            background-color: darkgray;
+        }
+
+        /* Removed the incomplete selector (no 4) */
+    </style>
+</head>
+<body style="color: cyan;">
+    <div>
+        <p>This is a paragraph. The text is red due to the first selector.</p>
+        <p>This is a paragraph. The background is yellow due to the second selector.</p>
+    </div>
+    <p>This is a paragraph. The background is dark gray due to the third selector.</p>
+    <p>This is a paragraph. The styles from the previous selectors do not apply to this paragraph as it is not a direct child of a div nor immediately follows a div.</p>
+</body>
+</html>
